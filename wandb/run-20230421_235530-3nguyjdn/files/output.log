@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "/extra/ucinlp1/dylan/Exploring-Instruction-Tuning/train.py", line 132, in <module>
-    main(all_args)
-  File "/extra/ucinlp1/dylan/Exploring-Instruction-Tuning/train.py", line 108, in main
-    test_data = data.load_bbh_tasks(sample=200)
-  File "/extra/ucinlp1/dylan/Exploring-Instruction-Tuning/data.py", line 39, in load_bbh_tasks
-    all_data = np.random.choice(all_data, replace=False, size=sample)
-  File "mtrand.pyx", line 915, in numpy.random.mtrand.RandomState.choice
-ValueError: 'a' cannot be empty unless no samples are taken
