@@ -27,7 +27,7 @@ def load_data(train: str = "./grade-school-math/grade_school_math/data/train.jso
     return train_data, test_data
 
 
-def load_bbh_tasks(bbh_folder: str = "./Big-Bench-Hard/bbh",
+def load_bbh_tasks(bbh_folder: str = "./BIG-Bench-Hard/bbh",
                    sample: int = -1):
     tasks = glob.glob(bbh_folder + "/*.json")
     all_data = []

@@ -56,7 +56,7 @@ def train(train_data, test_data, args):
         do_train=args.train,
         num_train_epochs=args.epochs,
         save_strategy='steps',
-        save_steps=args.eval_steps,
+        save_steps=args.eval_steps*4,
         per_device_train_batch_size=args.train_batch_size,
         per_device_eval_batch_size=args.train_batch_size,
         gradient_accumulation_steps=args.accum,
