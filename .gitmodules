@@ -1,0 +1,9 @@
+[submodule "grade-school-math"]
+	path = grade-school-math
+	url = https://github.com/openai/grade-school-math.git
+[submodule "BIG-Bench-Hard"]
+	path = BIG-Bench-Hard
+	url = https://github.com/suzgunmirac/BIG-Bench-Hard.git
+[submodule "dolly"]
+	path = dolly
+	url = https://github.com/databrickslabs/dolly.git

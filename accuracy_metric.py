@@ -89,14 +89,11 @@ class Accuracy(datasets.Metric):
         )
 
     def _compute(self, predictions, references, normalize=True, sample_weight=None):
-        new_predictions = []
-        print("Predictions:")
+        print('========')
+        print('Example predictions and references')
         print(predictions[:10])
-        for r in references:
-            regex_pattern = r"(?<=The answer is\s).*$"
-            match = re.search(regex_pattern, r).group()
-            new_predictions.append(f"The answer is {match}")
-        correct = [1 if v in pred else 0 for v, pred in zip(new_predictions, predictions)]
+        print(references[:10], flush=True)
+        print('========')
         return {
-            "accuracy": float(np.sum(correct)/len(correct))
+            "accuracy": accuracy_score(references, predictions)
         }

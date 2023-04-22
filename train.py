@@ -8,6 +8,8 @@ import numpy as np
 import transformers
 from datasets import Dataset
 
+import wandb
+
 import data
 
 
@@ -50,13 +52,16 @@ def train(train_data, test_data, args):
     training_args = transformers.TrainingArguments(
         output_dir="models",
         evaluation_strategy="steps",
-        eval_steps=20,
+        eval_steps=args.eval_steps,
         do_train=args.train,
         num_train_epochs=args.epochs,
+        save_strategy='steps',
+        save_steps=args.eval_steps,
         per_device_train_batch_size=args.train_batch_size,
         per_device_eval_batch_size=args.train_batch_size,
         gradient_accumulation_steps=args.accum,
         eval_accumulation_steps=1,
+        report_to="wandb"
     )
     acc_metric = datasets.load_metric("accuracy_metric.py")
     trainer = transformers.Trainer(
@@ -70,6 +75,7 @@ def train(train_data, test_data, args):
             acc_metric=acc_metric
         ),
     )
+    trainer.evaluate()
     trainer.train()
 
 
@@ -98,7 +104,8 @@ def preprocess_function(examples, tokenizer, args):
 
 
 def main(args):
-    train_data, test_data = data.load_data()
+    train_data = data.load_dolly_data()
+    test_data = data.load_bbh_tasks(sample=200)
     train(train_data, test_data, args)
 
 
@@ -111,9 +118,15 @@ if __name__ == "__main__":
     parser.add_argument('-t', '--train', action="store_true")
     parser.add_argument('-b', '--train_batch_size', type=int, default=16)
     parser.add_argument('-d', '--debug', action="store_true")
+    parser.add_argument('--eval-steps', type=int, default=200)
     parser.add_argument('--accum', type=int, default=4)
     parser.add_argument('--overwrite-cache', action="store_true")
     parser.add_argument('--max-source-length', type=int, default=1024)
     parser.add_argument('--max-target-length', type=int, default=256)
     all_args = parser.parse_args()
+
+    wandb.init(config=all_args,
+               project="Instruction Tuning Exploration",
+               name="test")
+
     main(all_args)
