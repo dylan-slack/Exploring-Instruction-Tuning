@@ -8,4 +8,4 @@
 #SBATCH --gpus=6
 #SBATCH --mem=100GB
 
-python train.py -m "google/flan-t5-large" --train -b 2 --accum 8 --overwrite-cache
+python train.py -m "google/flan-t5-large" --train -b 3 --accum 8 --overwrite-cache --eval-steps 10

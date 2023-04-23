@@ -1,0 +1,77 @@
+./BIG-Bench-Hard/bbh
+['./BIG-Bench-Hard/bbh/salient_translation_error_detection.json', './BIG-Bench-Hard/bbh/dyck_languages.json', './BIG-Bench-Hard/bbh/tracking_shuffled_objects_seven_objects.json', './BIG-Bench-Hard/bbh/tracking_shuffled_objects_five_objects.json', './BIG-Bench-Hard/bbh/object_counting.json', './BIG-Bench-Hard/bbh/web_of_lies.json', './BIG-Bench-Hard/bbh/logical_deduction_three_objects.json', './BIG-Bench-Hard/bbh/penguins_in_a_table.json', './BIG-Bench-Hard/bbh/disambiguation_qa.json', './BIG-Bench-Hard/bbh/temporal_sequences.json', './BIG-Bench-Hard/bbh/movie_recommendation.json', './BIG-Bench-Hard/bbh/boolean_expressions.json', './BIG-Bench-Hard/bbh/snarks.json', './BIG-Bench-Hard/bbh/navigate.json', './BIG-Bench-Hard/bbh/formal_fallacies.json', './BIG-Bench-Hard/bbh/date_understanding.json', './BIG-Bench-Hard/bbh/ruin_names.json', './BIG-Bench-Hard/bbh/multistep_arithmetic_two.json', './BIG-Bench-Hard/bbh/sports_understanding.json', './BIG-Bench-Hard/bbh/tracking_shuffled_objects_three_objects.json', './BIG-Bench-Hard/bbh/hyperbaton.json', './BIG-Bench-Hard/bbh/logical_deduction_five_objects.json', './BIG-Bench-Hard/bbh/geometric_shapes.json', './BIG-Bench-Hard/bbh/reasoning_about_colored_objects.json', './BIG-Bench-Hard/bbh/causal_judgement.json', './BIG-Bench-Hard/bbh/logical_deduction_seven_objects.json', './BIG-Bench-Hard/bbh/word_sorting.json']
+
+
+Running tokenizer on train dataset:  94%|█████████▍| 15/16 [00:05<00:00,  2.58ba/s]
+/extra/ucinlp1/dylan/Exploring-Instruction-Tuning/train.py:66: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+  acc_metric = datasets.load_metric("accuracy_metric.py")
+***** Running Evaluation *****
+  Num examples = 200
+  Batch size = 24
+/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+
+
+
+
+
+ 89%|████████▉ | 8/9 [00:12<00:01,  1.84s/it]
+========
+Example predictions and references
+['(  10 10 10 10             ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( (', 'Yes No No No No No No No No No No Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes Yes', '(A) 12 to ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( (', 'valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid valid', '(A) ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( (', '(D) is ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( ( (', 'TheA) The The ( ( ( ( ( ( ( ( ( The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The The', 'No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No No', 'False and is Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal Fal', '20 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 21 21 21 21 21 21 21 21 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20']
+['10', 'No', '(A)', 'valid', '(C)', '(D)', '(C)', 'No', 'False', '10']
+100%|██████████| 9/9 [00:14<00:00,  1.94s/it]Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+100%|██████████| 9/9 [00:15<00:00,  1.77s/it]
+/home/dslack/.conda/envs/benchmark-description-learning/lib/python3.9/site-packages/transformers/optimization.py:306: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+***** Running training *****
+  Num examples = 15014
+  Num Epochs = 10
+  Instantaneous batch size per device = 4
+  Total train batch size (w. parallel, distributed & accumulation) = 192
+  Gradient Accumulation steps = 8
+  Total optimization steps = 780
+  Number of trainable parameters = 783150080
+  0%|          | 0/780 [00:00<?, ?it/s]/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+Traceback (most recent call last):
+  File "/extra/ucinlp1/dylan/Exploring-Instruction-Tuning/train.py", line 132, in <module>
+    main(all_args)
+  File "/extra/ucinlp1/dylan/Exploring-Instruction-Tuning/train.py", line 109, in main
+    train(train_data, test_data, args)
+  File "/extra/ucinlp1/dylan/Exploring-Instruction-Tuning/train.py", line 79, in train
+    trainer.train()
+  File "/home/dslack/.conda/envs/benchmark-description-learning/lib/python3.9/site-packages/transformers/trainer.py", line 1543, in train
+    return inner_training_loop(
+  File "/home/dslack/.conda/envs/benchmark-description-learning/lib/python3.9/site-packages/transformers/trainer.py", line 1791, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/dslack/.conda/envs/benchmark-description-learning/lib/python3.9/site-packages/transformers/trainer.py", line 2539, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/dslack/.conda/envs/benchmark-description-learning/lib/python3.9/site-packages/transformers/trainer.py", line 2571, in compute_loss
+    outputs = model(**inputs)
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/data_parallel.py", line 172, in forward
+    return self.gather(outputs, self.output_device)
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/data_parallel.py", line 184, in gather
+    return gather(outputs, output_device, dim=self.dim)
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/scatter_gather.py", line 86, in gather
+    res = gather_map(outputs)
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/scatter_gather.py", line 77, in gather_map
+    return type(out)((k, gather_map([d[k] for d in outputs]))
+  File "<string>", line 12, in __init__
+  File "/home/dslack/.conda/envs/benchmark-description-learning/lib/python3.9/site-packages/transformers/utils/generic.py", line 248, in __post_init__
+    for idx, element in enumerate(iterator):
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/scatter_gather.py", line 77, in <genexpr>
+    return type(out)((k, gather_map([d[k] for d in outputs]))
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/scatter_gather.py", line 81, in gather_map
+    return type(out)(map(gather_map, zip(*outputs)))
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/scatter_gather.py", line 81, in gather_map
+    return type(out)(map(gather_map, zip(*outputs)))
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/scatter_gather.py", line 71, in gather_map
+    return Gather.apply(target_device, dim, *outputs)
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/_functions.py", line 75, in forward
+    return comm.gather(inputs, ctx.dim, ctx.target_device)
+  File "/extra/ucinlp1/dylan/pytorch/torch/nn/parallel/comm.py", line 235, in gather
+    return torch._C._gather(tensors, dim, destination)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB (GPU 0; 47.54 GiB total capacity; 45.49 GiB already allocated; 21.38 MiB free; 46.21 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
