@@ -29,7 +29,9 @@ def load_data(train: str = "./grade-school-math/grade_school_math/data/train.jso
 
 def load_bbh_tasks(bbh_folder: str = "./BIG-Bench-Hard/bbh",
                    sample: int = -1):
+    print(bbh_folder)
     tasks = glob.glob(bbh_folder + "/*.json")
+    print(tasks)
     all_data = []
     for t in tasks:
         with open(t) as json_file:
@@ -68,3 +70,6 @@ def load_dolly_data(dolly_file: str = "./dolly/data/databricks-dolly-15k.jsonl")
                 {"question": question, "answer": answer}
             )
     return Dataset.from_list(all_data)
+
+
+load_bbh_tasks()
